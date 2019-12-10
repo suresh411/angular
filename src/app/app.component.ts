@@ -8,12 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'cart';
   status=true;
-  username="";
-  names=['suresh', 'sekhar']
-
   
+name="";
+price:number=0;
+  fruits=[{name:"apple", price:100},
+  {name:"orange", price:60},
+]
 
-  showhidebutton(){
+showhidebutton(){
      this.status=!this.status;
 //(or)
     // if(this.status===true){
@@ -22,8 +24,14 @@ export class AppComponent {
     //   this.status=true
     // }
     
-    this.names.push(this.username);
-  }
+    this.fruits.push({
+name:this.name,
+price:this.price,
+
+});
+   
+
+}
 
 
 

@@ -1,13 +1,52 @@
-<input type="text" [(ngModel)]="username">
-<button (click)="showhidebutton()">click</button>
+<div class="container">
+<div class="row">
+<div class="col-4 formgroup">
+    <label>Fruits Name:</label>
+    <input type="text" class="formcontrol p-1" [(ngModel)]="name">
+</div>
+
+<div class="col-4 formgroup">
+        <label>Price:</label>
+        <input type="number" class="formcontrol p-1" [(ngModel)]="price">
+    </div>
+</div>
+</div>
+
+
+<button (click)="showhidebutton()" class="container-fluid btn btn-primary btn-outline-dark btn-lg " >click</button><br>
+
+<!-- 
 {{status}}
-<p *ngIf="status">hello</p>
+<p *ngIf="status">Hello</p>
 
-<p *ngIf="status">{{username}}</p>
 
-<ul>
-    <li  *ngFor="let name of names">{{name}}</li>
-</ul>
+<div class="container-fluid">
+<tr class="table"><td>name</td>
+    <td>price</td></tr></div>
+
+
+<ul *ngFor="let fruit of fruits">
+    <li>{{fruit.name}}   Rs{{fruit.price}}</li>
+    
+</ul> -->
+
+<br>
+<p class="container-fluid bg-danger p-3">Fruits list:</p>
+<table class=" table table-striped table-primary">
+    <tr>
+        <thead class="bg-info">
+            <td>Fruit Name</td>
+            <td>price</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fruit of fruits">
+                <td>{{fruit.name}}</td>
+                <td>Rs{{fruit.price}}</td>
+            </tr>
+        </tbody>
+    </tr>
+</table>
+
 
 <router-outlet></router-outlet>
 
