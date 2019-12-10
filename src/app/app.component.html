@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="username">
+<button (click)="showhidebutton()">click</button>
+{{status}}
+<p *ngIf="status">hello</p>
+
+<p *ngIf="status">{{username}}</p>
+
+<ul>
+    <li  *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<router-outlet></router-outlet>
+
